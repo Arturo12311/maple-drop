@@ -15,33 +15,13 @@
 <body class="bg-[#041E42] text-white flex flex-col items-center justify-center min-h-screen px-4 text-center font-sans">
 
   <h1 class="text-6xl mb-4 tracking-wide" style="font-family: 'DrukWide'">MAPLE</h1>
-  <p class="text-xl mb-6">Drop Coming Soon</p>
-
-  <div id="countdown" class="text-3xl font-mono mb-8"></div>
-
-  <p class="text-sm mt-1 text-white opacity-80">Launching August 8, 2025 @ 5:00 PM EST</p>
+  <p class="text-xl mb-2">Drop Launching August 8 • 5PM EST</p>
+  <p class="text-sm text-white opacity-80 mb-6">Sign up to get notified first</p>
 
   <form action="https://formspree.io/f/mdkdapkq" method="POST" class="mt-0.5 flex flex-col sm:flex-row gap-2">
     <input type="email" name="email" placeholder="Enter your email" class="px-4 py-2 text-black rounded" required />
     <button type="submit" class="bg-white text-black px-4 py-2 rounded font-bold">Notify Me</button>
   </form>
-
-  <script>
-    const dropDate = new Date("August 8, 2025 17:00:00").getTime();
-    const countdown = document.getElementById("countdown");
-
-    setInterval(() => {
-      const now = new Date().getTime();
-      const distance = dropDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    }, 1000);
-  </script>
 
 </body>
 </html>
